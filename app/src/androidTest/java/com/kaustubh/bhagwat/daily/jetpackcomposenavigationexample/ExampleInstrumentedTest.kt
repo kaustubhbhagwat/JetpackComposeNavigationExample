@@ -20,7 +20,7 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals(
-            "com.kaustubh.bhagwat.daily.jetpackcomposenavigationexampkle",
+            "com.kaustubh.bhagwat.daily.jetpackcomposenavigationexample",
             appContext.packageName
         )
     }

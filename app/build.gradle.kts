@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.kaustubh.bhagwat.daily.jetpackcomposenavigationexampkle"
+    namespace = "com.kaustubh.bhagwat.daily.jetpackcomposenavigationexample"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.kaustubh.bhagwat.daily.jetpackcomposenavigationexampkle"
+        applicationId = "com.kaustubh.bhagwat.daily.jetpackcomposenavigationexample"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
