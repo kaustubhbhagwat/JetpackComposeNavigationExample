@@ -1,5 +1,6 @@
 package com.kaustubh.bhagwat.daily.jetpackcomposenavigationexample
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,21 +11,32 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun HomeScreen(){
+fun HomeScreen(
+    navController: NavController
+){
     Box(modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center,
     ){
-        Text(text = "Home",
+        Text(
+            text = "Home",
             color = MaterialTheme.colorScheme.primary,
             fontSize = MaterialTheme.typography.headlineMedium.fontSize,
-            fontWeight = FontWeight.Bold)
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.clickable {
+                navController.navigate(route = Screen.Detail.route)
+            }
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun HomeScreenPreview(){
-    HomeScreen()
+    HomeScreen(
+        navController = rememberNavController()
+    )
 }
