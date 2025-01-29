@@ -28,7 +28,11 @@ fun DetailScreen(
             fontSize = MaterialTheme.typography.headlineMedium.fontSize,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.clickable {
-                navController.popBackStack()
+                navController.navigate(Screen.Home.route){
+                    popUpTo(Screen.Home.route){
+                        inclusive = true
+                    }
+                }
             }
         )
     }
