@@ -27,7 +27,7 @@ fun HomeScreen(
             fontSize = MaterialTheme.typography.headlineMedium.fontSize,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.clickable {
-                navController.navigate(route = "detail_screen/" + 1)
+                navController.navigate(route = Screen.Detail.passIdOptional())
             }
         )
     }
